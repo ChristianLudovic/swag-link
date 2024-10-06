@@ -1,101 +1,54 @@
+import Navbar from "@/components/navbar";
+import SwagLinkCard from "@/components/swagLinkCard";
+import localFont from "next/font/local";
 import Image from "next/image";
+import image1 from "./assets/images/1.svg";
+import illustraion from "./assets/images/swagIllustration.svg";
+
+const gtSuperFont = localFont({
+  src: '../public/rebond-grotesque/ESRebondGrotesqueTRIAL-Extrabold-BF661890400e032.otf',
+  fontWeight: '900',
+  fontStyle: 'normal',
+  fontDisplay: 'swap',
+
+})
 
 export default function Home() {
   return (
-    <div className="grid grid-rows-[20px_1fr_20px] items-center justify-items-center min-h-screen p-8 pb-20 gap-16 sm:p-20 font-[family-name:var(--font-geist-sans)]">
-      <main className="flex flex-col gap-8 row-start-2 items-center sm:items-start">
-        <Image
-          className="dark:invert"
-          src="https://nextjs.org/icons/next.svg"
-          alt="Next.js logo"
-          width={180}
-          height={38}
-          priority
-        />
-        <ol className="list-inside list-decimal text-sm text-center sm:text-left font-[family-name:var(--font-geist-mono)]">
-          <li className="mb-2">
-            Get started by editing{" "}
-            <code className="bg-black/[.05] dark:bg-white/[.06] px-1 py-0.5 rounded font-semibold">
-              app/page.js
-            </code>
-            .
-          </li>
-          <li>Save and see your changes instantly.</li>
-        </ol>
-
-        <div className="flex gap-4 items-center flex-col sm:flex-row">
-          <a
-            className="rounded-full border border-solid border-transparent transition-colors flex items-center justify-center bg-foreground text-background gap-2 hover:bg-[#383838] dark:hover:bg-[#ccc] text-sm sm:text-base h-10 sm:h-12 px-4 sm:px-5"
-            href="https://vercel.com/new?utm_source=create-next-app&utm_medium=appdir-template-tw&utm_campaign=create-next-app"
-            target="_blank"
-            rel="noopener noreferrer"
-          >
-            <Image
-              className="dark:invert"
-              src="https://nextjs.org/icons/vercel.svg"
-              alt="Vercel logomark"
-              width={20}
-              height={20}
-            />
-            Deploy now
-          </a>
-          <a
-            className="rounded-full border border-solid border-black/[.08] dark:border-white/[.145] transition-colors flex items-center justify-center hover:bg-[#f2f2f2] dark:hover:bg-[#1a1a1a] hover:border-transparent text-sm sm:text-base h-10 sm:h-12 px-4 sm:px-5 sm:min-w-44"
-            href="https://nextjs.org/docs?utm_source=create-next-app&utm_medium=appdir-template-tw&utm_campaign=create-next-app"
-            target="_blank"
-            rel="noopener noreferrer"
-          >
-            Read our docs
-          </a>
+    <div className="max-w-[1431px] mx-auto relative">
+      <Navbar />
+      <main className="flex justify-between mt-6 pb-[160px]">
+        <SwagLinkCard />
+        <div className="max-w-[430px] space-y-9">
+          <h1 className={`${gtSuperFont.className} text-[64px] leading-[100%]`}>Take full control over your links </h1>
+          <div className="space-y-4">
+            <div className="flex items-start space-x-4">
+              <svg class="tick" width="16" height="11" className="w-6 h-6 mt-1" viewBox="0 0 16 11" fill="none" xmlns="http://www.w3.org/2000/svg">
+                <path d="M16 0L10.6093 6.46881C8.47319 9.03217 7.40512 10.3139 6 10.3139C4.59488 10.3139 3.52681 9.03217 1.39067 6.46881L0 4.8" stroke="#2D264B" stroke-width="1.5" stroke-linecap="round" />
+                
+              </svg>
+              <p className="leading-[150%] text-md"><span className="font-semibold">Share temporary passwords</span> : Generate limited-use access links for shared accounts.</p>
+            </div>
+            <div className="flex items-start space-x-4">
+              <svg class="tick" width="16" height="11" className="w-6 h-6 mt-1" viewBox="0 0 16 11" fill="none" xmlns="http://www.w3.org/2000/svg">
+                <path d="M16 0L10.6093 6.46881C8.47319 9.03217 7.40512 10.3139 6 10.3139C4.59488 10.3139 3.52681 9.03217 1.39067 6.46881L0 4.8" stroke="#2D264B" stroke-width="1.5" stroke-linecap="round" />
+                
+              </svg>
+              <p className="leading-[150%]"><span className="font-semibold">Sharing sensitive files</span> : Allow access to a confidential document a limited number of times.</p>
+            </div>
+            <div className="flex items-start space-x-4">
+              <svg class="tick" width="16" height="11" className="w-6 h-6 mt-1" viewBox="0 0 16 11" fill="none" xmlns="http://www.w3.org/2000/svg">
+                <path d="M16 0L10.6093 6.46881C8.47319 9.03217 7.40512 10.3139 6 10.3139C4.59488 10.3139 3.52681 9.03217 1.39067 6.46881L0 4.8" stroke="#2D264B" stroke-width="1.5" stroke-linecap="round" />
+                
+              </svg>
+              <p className="leading-[150%]"><span className="font-semibold">Product testing</span> : Offer a limited number of trials for a new service or software.</p>
+            </div>
+            
+          </div>
         </div>
+        <Image width={500} src={image1} alt=""/>
       </main>
-      <footer className="row-start-3 flex gap-6 flex-wrap items-center justify-center">
-        <a
-          className="flex items-center gap-2 hover:underline hover:underline-offset-4"
-          href="https://nextjs.org/learn?utm_source=create-next-app&utm_medium=appdir-template-tw&utm_campaign=create-next-app"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          <Image
-            aria-hidden
-            src="https://nextjs.org/icons/file.svg"
-            alt="File icon"
-            width={16}
-            height={16}
-          />
-          Learn
-        </a>
-        <a
-          className="flex items-center gap-2 hover:underline hover:underline-offset-4"
-          href="https://vercel.com/templates?framework=next.js&utm_source=create-next-app&utm_medium=appdir-template-tw&utm_campaign=create-next-app"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          <Image
-            aria-hidden
-            src="https://nextjs.org/icons/window.svg"
-            alt="Window icon"
-            width={16}
-            height={16}
-          />
-          Examples
-        </a>
-        <a
-          className="flex items-center gap-2 hover:underline hover:underline-offset-4"
-          href="https://nextjs.org?utm_source=create-next-app&utm_medium=appdir-template-tw&utm_campaign=create-next-app"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          <Image
-            aria-hidden
-            src="https://nextjs.org/icons/globe.svg"
-            alt="Globe icon"
-            width={16}
-            height={16}
-          />
-          Go to nextjs.org →
-        </a>
-      </footer>
+      <Image src={illustraion} alt="illustration" className="absolute right-[100px] bottom-0"/>  
     </div>
   );
 }
